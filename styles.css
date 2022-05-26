@@ -17,7 +17,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 12px;
-    font-family: var(--font-family)
+    font-family: var(--font-family);
+    margin: 0vw
 }
 
 h1 {
@@ -30,7 +31,10 @@ h3 {
     font-size: 1em;
     color: var(--clr-text-very-dark-grayish-blue);
     font-family: var(--font-family);
-    margin: 2vw 0vw 
+}
+
+i{
+    font-family: var(--font-family)
 }
 
 .container {
@@ -41,6 +45,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     border-radius: 6vw;
+    box-shadow: 0vw 4vw 15vw hsl(237, 12%, 33%)
 }
 
 .img-woman {
@@ -85,14 +90,17 @@ h3 {
 .btn :hover {
     color: var(--clr-text-soft-red);
     transition: var(--transition)
-
 }
 
 .question-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center    
+}
+
+.question-title-heading {
+    width: 66vw
 }
 
 .down {
@@ -100,7 +108,6 @@ h3 {
     color: var(--clr-text-soft-red);
     transition: var(--transition);
     font-weight: 700;
-    margin: 2vw 0vw;
 }
 
 .up {
@@ -112,9 +119,108 @@ h3 {
 }
 
 .question-body {
-    padding-bottom: 4vw
+    padding-bottom: 4vw;
+    transition: var(--transition);
+    display: none
 }
 
 .question-body span {
     color: var(--clr-text-dark-grayish-blue);
+}
+
+.show-text .question-title-heading {
+    font-weight: 700;
+}
+
+.show-text .question-body {
+    transition: var(--transition);
+    display: block
+}
+
+.show-text .down {
+    display: none
+}
+
+.show-text .up {
+    display: block
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        justify-content: center;
+    }
+
+    h1 {
+        margin: 1vw 0vw;
+        font-size: 1.5em
+    }
+
+    h3 {
+        font-size: 0.6em
+    }
+
+    span {
+        font-size: 0.6em;
+        line-height: 50%
+    }
+
+    .container {
+        margin: 12vw 16vw 12vw 24vw;
+        padding: 40vw 4vw 4vw 8vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 2vw
+    }
+
+    .img-woman {
+        width: 30vw;
+        height: 30vw;
+        margin-top: -30vw;
+        margin-left: -12vw;
+        background-image: url(images/illustration-woman-online-desktop.svg)
+    }
+
+    .img-block {
+        background-image: url(images/illustration-box-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 12vw;
+        width: 12vw;
+        margin-left: -14vw;
+        margin-top: -21vw
+    }
+
+    .img-shadow {
+        background-image: url(images/bg-pattern-desktop.svg);
+        width: 30vw;
+        height: 30vw;
+        margin-left: -12vw;
+        margin-top: -22vw
+    }
+
+    .body {
+        padding-left: 8vw
+    }
+
+    .body-header {
+        text-align: left
+    }
+
+    .question-body {
+        padding-bottom: 1vw
+    }
+
+    .down {
+        font-size: 1em;
+    }
+
+    .up {
+        font-size: 1em
+    }
+
+    .question-title-heading {
+        width: 22vw
+    }
 }
